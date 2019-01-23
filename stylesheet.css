@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Coming+Soon');
+@import url('https://fonts.googleapis.com/css?family=Tajawal');
 
 
 * {box-sizing: border-box}
@@ -8,16 +8,16 @@ nav {
     position: fixed;
     z-index: 1;
     width: 100%; 
-    background-color:rgba(104, 101, 101, 0.45);
+    background-color:rgba(133, 133, 133, 0.45);
     padding: 10px;
     text-align: center;
-    font-size: 18px;
-    font-family: 'Coming Soon', cursive;
+    font-size: 25px;
+    font-family: 'Tajawal', sans-serif;
     top: 0;
 }
 
 body {
-    background-image: url(images/kat-love-756075-unsplash.jpg);
+    background-image: url(images/island-sky.jpg);
     background-size: 1920px;
     margin: 0;
     padding: 0px;
@@ -26,18 +26,19 @@ body {
 
 h1 {
    padding-top: 60px;
-    font-family: 'Coming Soon', cursive;
+    font-family: 'Tajawal', sans-serif;
     color: white;
-    text-indent: 20px;
+    text-indent: 30px;
    
 }
 
 p {
     text-align: justify;
-    font-size: 19px;
+    font-size: 23px;
     color: white;
-    margin: 22px;
-    font-family: 'Coming Soon', cursive; 
+    margin: 30px;
+    font-family: 'Tajawal', sans-serif;
+ 
 }
 
 a {
@@ -49,7 +50,7 @@ a {
 }
 
 a:hover {
-    color: #db189a;
+    color: #659b55;
 }
 
 
@@ -57,7 +58,8 @@ form {
     float: left;
     color: aliceblue;  
     padding: 35px;
-    font-family: 'Coming Soon', cursive;  
+    font-size: 19px;
+    font-family: 'Tajawal', sans-serif;
  }
 
 
@@ -86,7 +88,7 @@ img {
 .overlay {
    position: absolute;
     bottom: 2%;
-    background: rgba(131, 128, 128, 0.753);
+    background: rgba(133, 133, 133, 0.45);
     width: 100%;
     transition: .2s ease-in;
     color: white;
