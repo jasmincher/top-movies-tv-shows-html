@@ -1,55 +1,72 @@
-let URL_API = 'https://api.themoviedb.org/3/account/5c28184992514138d7bfb12c/favorite/tv?api_key=1fb718e33990d4d733d6e019892804af&language=en-US&session_id=b6b330efa1be1637afe86ef483a7093c96c21939&sort_by=created_at.asc&page=1';
+const card = document = document.querySelector('.content');
 
 
-let tvList = [];
-let i = 0;
-const card = document.querySelector('.content');
-let ca = document.createElement('a');
-let img = document.createElement('img');
+function poster(data){
 
-function mapCards(shows) {
+  const info = data.map(tv => {
+  
+    let img = tv.poster_path;
 
-    const html = shows.map(tv => {
+    let title = tv.name;
 
-        let poster = tv.poster_path;
+    return `
 
-        let title = tv.title || tv.name;
+  <a href= "https://www.themoviedb.org/tv/${tv.id}" class="card" target= "_blank">
 
-        let isMovieOrTv = (tv.title) ? 'movie' : 'tv';
+  <div class="front" style = "background-image: url(https://image.tmdb.org/t/p/original${tv.poster_path});">
 
-        return `<a target="_blank" class="card" href="https://www.themoviedb.org/movie/${tv.id}">
-    
-    <div class="front" style="background-image: url(//image.tmdb.org/t/p/original${tv.poster_path});"> 
+
       
+  
+  
       
-      <p>${title}</p>
-    </div>
-    <div class="back">
-      <div>
-        <p class="overview">${tv.overview}</p>
-        
-        </div>
-    </div>
-  </a> ` ;
 
-    }).join('');
 
-    card.innerHTML += html;
+  <p>${title}</p>
+  </div>
+
+  
+  <div class = "back">
+  
+  <div>
+  
+  <p class="overview"> ${tv.overview}</p>
+  
+  </div>
+
+  </div>
+
+  </a>
+    `;
+  })
+
+
+card.innerHTML += info;
 
 }
 
-fetch(URL_API, {
-    method: "GET",
-    headers: {
-        'Content-Type': 'application/json'
-    }
-})
-    .then(resp => resp.json())
-    .then(data => {
-        tvList = ((data.items) || data.results);
-        mapCards(tvList);
 
-    })
-    .catch((err) => {
-        console.log(err);
-    })
+
+
+
+
+
+
+const api_url = 'https://api.themoviedb.org/3/account/5c28184992514138d7bfb12c/favorite/tv?api_key=1fb718e33990d4d733d6e019892804af&language=en-US&session_id=b6b330efa1be1637afe86ef483a7093c96c21939&sort_by=created_at.asc&page=1';
+
+
+
+
+
+fetch(api_url)
+
+.then(function(resp) {   
+  return resp.json();
+})
+
+.then(function(data) {
+  tvList = data.results;
+  poster(tvList);
+
+});
+
