@@ -1,193 +1,68 @@
-@import url('https://fonts.googleapis.com/css?family=Tajawal');
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
 
-
-
-  *, *:before, *:after {
-    box-sizing: border-box;
-  }
-  
-
-
-  html {
-    font-size: 18px;
-    line-height: 1.5;
-    font-weight: 300;
-    color: #333;
-    font-family: 'Tajawal', sans-serif;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-color: rgb(182, 164, 181);
-    background-attachment: fixed;
-  }
-  
-  nav {
-     background-color:rgba(85, 81, 81, 0.849);
-    font-size: 25px;
-    font-family: 'Tajawal', sans-serif;
-    
-  
+ *, *:before, *:after {
+  box-sizing: border-box;
 }
 
-a {
-    color: white;
-    text-align: center;
-    padding: 44px;
-    text-decoration: none;
-    
-   
+html {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #333;
+  font-family: 'Maven Pro', sans-serif;
 }
 
-a:hover {
-    color: #659b55;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #c4c3be;
+}
+
+.content{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 
-
-
-form {
-  float: left;
-  color: aliceblue;  
-  padding: 35px;
-  font-size: 19px;
-  font-family: 'Tajawal', sans-serif;
+.poster {
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  height: 333px;
+  max-height: 320px;
+  margin: 25px;
 }
 
 
-  .content {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1000px;
-  }
+.img{
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
   
-  p.overview {
-    font-size: 12px;
-  }
-  
-  .heading {
-    width: 100%;
-    margin-top: 100px;
-    margin-left: 1rem;
-    font-weight: 900;
-    font-size: 1.618rem;
-    text-transform: uppercase;
-    letter-spacing: .1ch;
-    line-height: 1;
-    padding-bottom: .5em;
-    margin-bottom: 1rem;
-    position: relative;
-  }
-  .heading:after {
-    display: block;
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(135deg, #1a9be6, #1a57e6);
-    bottom: 0;
-  }
-  
-  /* .description {
-    width: 100%;
-    margin-top: 1px;
-    margin-left: 350px;
-    margin-bottom: 3rem;
-  }
-   */
-  .card {
-    color: inherit;
-    cursor: pointer;
-    width: calc(33% - 2rem);
-    min-width: calc(33% - 2rem);
-    height: 400px;
-    min-height: 400px;
-    -webkit-perspective: 1000px;
-            perspective: 1000px;
-    margin: 1rem;
-    position: relative;
-  }
-  @media screen and (max-width: 800px) {
-    .card {
-      width: calc(50% - 2rem);
-    }
-  }
-  @media screen and (max-width: 500px) {
-    .card {
-      width: 100%;
-    }
-  }
-  
-  .front,
-  .back {
-    display: flex;
-    border-radius: 6px;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    transition: ease-in-out 600ms;
-  }
-  
-  .front {
-    background-size: cover;
-    padding: 2rem;
-    font-size: 1.618rem;
-    font-weight: 600;
-    color: #fff;
-    overflow: hidden;
-    font-family: Poppins, sans-serif;
-  }
-  .front:before {
-    position: absolute;
-    display: block;
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, #1a9be6, #1a57e6);
-    opacity: .25;
-    z-index: -1;
-  }
-  .card:hover .front {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-  }
-  .card:nth-child(even):hover .front {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-  }
-  
-  .back {
-    background: #fff;
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    padding: 0 2em;
-  }
-  .card:hover .back {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  .card:nth-child(even) .back {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-  }
-  .card:nth-child(even):hover .back {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  
+}
+
+
+
+
+.overlay{ 
+  padding: 14px;
+  padding-top: 5px;
+  font-size: 11px;
+  color: rgb(255, 255, 255);
+  visibility: hidden;
+  background-color: #020202;
+  border-radius: 10px;
+ 
+}
+
+.poster:hover .overlay{
+  visibility: visible;
+  opacity: .7;
+}
