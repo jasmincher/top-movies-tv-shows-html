@@ -9,10 +9,8 @@ function poster(data){
 
     let title = tv.name;
 
-    return `
     
-
-
+    return `
 <a target="_blank" class="poster" href="https://www.themoviedb.org/tv/${tv.id}">
 
 <div class="img" style="background-image: url(//image.tmdb.org/t/p/original${tv.poster_path});"> 
