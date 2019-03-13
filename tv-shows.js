@@ -17,7 +17,7 @@ function poster(data){
   
 
 <div class="overlay">
-<p>${title}</p>
+<p style="line-height:1%;">${title}</p>
 <p>${tv.overview}</p>
  
 </div>
@@ -35,12 +35,13 @@ card.innerHTML += info;
 
 
 
+var api_url = 'https://api.themoviedb.org/3/account/5c28184992514138d7bfb12c/favorite/tv?api_key=1fb718e33990d4d733d6e019892804af&language=en-US&session_id=b6b330efa1be1637afe86ef483a7093c96c21939&sort_by=title.asc&page=';
+
+for(var i = 1; i < 3; i++){
+  var pages = api_url + i;
 
 
-
-
-const api_url = 'https://api.themoviedb.org/3/account/5c28184992514138d7bfb12c/favorite/tv?api_key=1fb718e33990d4d733d6e019892804af&language=en-US&session_id=b6b330efa1be1637afe86ef483a7093c96c21939&sort_by=created_at.asc&page=1';
-fetch(api_url)
+fetch(pages)
 
 .then(function(resp) {   
   return resp.json();
@@ -51,4 +52,7 @@ fetch(api_url)
   poster(tvList);
 
 });
+
+}
+
 

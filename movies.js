@@ -19,7 +19,7 @@ function poster(data) {
     
   
   <div class="overlay">
-  <p>${title}</p>
+  <p style="line-height:1%;">${title}</p>
   <p>${movie.overview}</p>
    
   </div>
@@ -38,8 +38,13 @@ function poster(data) {
 
 
 
-const api_url = 'https://api.themoviedb.org/3/account/5c28184992514138d7bfb12c/favorite/movies?api_key=1fb718e33990d4d733d6e019892804af&session_id=5bdd135621f2870248ccbb1a7250a7b72cb61b15&language=en-US&sort_by=created_at.asc&page=1';
-fetch(api_url)
+
+var api_url = 'https://api.themoviedb.org/3/account/5c28184992514138d7bfb12c/favorite/movies?api_key=1fb718e33990d4d733d6e019892804af&session_id=5bdd135621f2870248ccbb1a7250a7b72cb61b15&language=en-US&sort_by=title.asc&page=';
+
+for(var i = 1; i < 3; i++){
+var pages = api_url + i;
+
+fetch(pages)
 
   .then(function (resp) {
     return resp.json();
@@ -51,3 +56,5 @@ fetch(api_url)
 
   });
 
+
+}

@@ -16,7 +16,7 @@ html body{
 
   margin: 0;
   padding: 0;
-  background-color:rgb(224, 228, 220);
+  background-color:rgb(237, 240, 234);
 
   /* background-image: url(images/priscilla-du-preez-428495-unsplash.jpg); */
 
@@ -33,10 +33,13 @@ nav a{
 }
 
 nav a:hover{
-  color: rgb(100, 100, 100);
+  color: rgb(112, 112, 112);
+  transition: all ease .3s;
 }
 
-
+nav .current a{
+  color: rgb(112, 112, 112);
+}
 .content{
   display: flex;
   margin: 0 auto;
@@ -75,16 +78,19 @@ nav a:hover{
 
 .overlay{ /*title and overview*/
   padding: 14px;
-  padding-top: 5px;
+  padding-top: 25px;
   font-size: 11px;
   color: rgb(255, 255, 255);
   visibility: hidden;
   background-color: #020202;
   border-radius: 10px;
+  transition: .2s;
  
 }
 
 .poster:hover .overlay{
   visibility: visible;
   opacity: .7;
+  transition: .2s;
+
 }
