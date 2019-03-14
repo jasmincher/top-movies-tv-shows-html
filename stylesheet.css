@@ -40,6 +40,7 @@ nav a:hover{
 nav .current a{
   color: rgb(112, 112, 112);
 }
+
 .content{
   display: flex;
   margin: 0 auto;
@@ -73,7 +74,9 @@ nav .current a{
   
 }
 
-
+.div-height{
+  margin: 5% 2% 5% 2%;
+}
 
 
 .overlay{ /*title and overview*/
