@@ -8,7 +8,7 @@
 }
 
 html body{
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   font-weight: 300;
   color: rgb(0,0,0);
@@ -26,7 +26,7 @@ nav{
  
 nav a{
   color:rgb(255, 255, 255) !important;
-  margin: 5px 70px 5px 70px;
+  margin: 0px 70px 0px 70px;
   font-family: 'Happy Monkey', cursive;
 }
 
@@ -69,7 +69,7 @@ nav .current a{
 }
 
 .div-height{
-  margin: 7% 2% 5% 2%;
+  margin: 70px 2% 5% 2%;
 }
 
  /*title and overview*/
