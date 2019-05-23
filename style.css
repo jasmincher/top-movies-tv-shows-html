@@ -25,23 +25,23 @@ nav{
 }
  
 nav a{
-  color:rgb(255, 255, 255);
+  color:rgb(255, 255, 255) !important;
   margin: 5px 70px 5px 70px;
   font-family: 'Happy Monkey', cursive;
 }
 
 nav a:hover{
-  color: rgb(112, 112, 112);
+  color: rgb(112, 112, 112) !important;
   transition: all ease .3s;
 }
 
 nav .current a{
-  color: rgb(112, 112, 112);
+  color: rgb(112, 112, 112) !important;
 }
 
 .content{
   display: flex;
-  margin: 0 auto;
+  margin: auto;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -55,9 +55,7 @@ nav .current a{
   height: 333px;
   max-height: 320px;
   margin: 25px;
- 
 }
-
 
 .img{
   display: flex;
@@ -67,15 +65,12 @@ nav .current a{
   width: 100%;
   height: 100%;
   background-size: cover;
-  margin: 70px 0 70px 0;
-
-  
+  margin: 40% 0 15% 0; 
 }
 
 .div-height{
-  margin: 5% 2% 5% 2%;
+  margin: 7% 2% 5% 2%;
 }
-
 
  /*title and overview*/
 .overlay{
