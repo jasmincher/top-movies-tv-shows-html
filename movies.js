@@ -11,6 +11,8 @@ function poster(data) {
 
     let title = movie.title;
 
+    console.log(title); 
+
     return `
   <a target="_blank" class="poster" href="https://www.themoviedb.org/movie/${movie.id}">
 
@@ -36,9 +38,6 @@ function poster(data) {
 
 }
 
-
-
-
 var api_url = 'https://api.themoviedb.org/3/account/5c28184992514138d7bfb12c/favorite/movies?api_key=1fb718e33990d4d733d6e019892804af&session_id=5bdd135621f2870248ccbb1a7250a7b72cb61b15&language=en-US&sort_by=title.asc&page=';
 
 for(var i = 1; i < 3; i++){
@@ -53,7 +52,6 @@ fetch(pages)
   .then(function (data) {
     movieList = data.results;
     poster(movieList);
-
   });
 
 

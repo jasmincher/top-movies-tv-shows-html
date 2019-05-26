@@ -9,6 +9,8 @@ function poster(data){
 
     let title = tv.name;
 
+    console.log(title); 
+
     
     return `
 <a target="_blank" class="poster" href="https://www.themoviedb.org/tv/${tv.id}">
