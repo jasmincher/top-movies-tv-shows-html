@@ -9,7 +9,7 @@ function poster(data){
 
     let title = tv.name;
 
-    console.log(title); 
+    // console.log(title); 
 
     
     return `

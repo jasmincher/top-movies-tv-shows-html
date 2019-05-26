@@ -11,7 +11,7 @@ function poster(data) {
 
     let title = movie.title;
 
-    console.log(title); 
+    // console.log(title); 
 
     return `
   <a target="_blank" class="poster" href="https://www.themoviedb.org/movie/${movie.id}">
