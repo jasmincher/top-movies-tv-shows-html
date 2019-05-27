@@ -83,5 +83,10 @@ nav .current a{
   visibility: visible;
   opacity: .7;
   transition: .2s;
+}
+
+.reviews{
+  width: 80%;
+  margin: 0 5% 2% 5%;
 
 }
